@@ -1,0 +1,102 @@
+*** Device descriptor ***
+bLength 18
+bDescriptorType 1
+bcdUSB 2.00
+bDeviceClass 0x0
+bDeviceSubClass 0x0
+bDeviceProtocol 0x0
+bMaxPacketSize0 64
+idVendor 0x284e
+idProduct 0x8d00
+bcdDevice 1.00
+iManufacturer 1
+iProduct 2
+iSerialNumber 3
+bNumConfigurations 1
+*** Configuration descriptor ***
+bLength 9
+bDescriptorType 2
+wTotalLength 66
+bNumInterfaces 2
+bConfigurationValue 1
+iConfiguration 0
+bmAttributes 0x80
+bMaxPower 500mA
+        *** Interface descriptor ***
+        bLength 9
+        bDescriptorType 4
+        bInterfaceNumber 0
+        bAlternateSetting 0
+        bNumEndpoints 2
+        bInterfaceClass 0x0
+        iInterface 0
+                *** Endpoint descriptor ***
+                bLength 7
+                bDescriptorType 5
+                bEndpointAddress 0x81   EP 1 IN
+                bmAttributes 0x3        INT
+                wMaxPacketSize 64
+                bInterval 1
+                *** Endpoint descriptor ***
+                bLength 7
+                bDescriptorType 5
+                bEndpointAddress 0x1    EP 1 OUT
+                bmAttributes 0x3        INT
+                wMaxPacketSize 64
+                bInterval 1
+        *** Interface descriptor ***
+        bLength 9
+        bDescriptorType 4
+        bInterfaceNumber 1
+        bAlternateSetting 0
+        bNumEndpoints 1
+        bInterfaceClass 0x0
+        iInterface 0
+                *** Endpoint descriptor ***
+                bLength 7
+                bDescriptorType 5
+                bEndpointAddress 0x82   EP 2 IN
+                bmAttributes 0x3        INT
+                wMaxPacketSize 64
+                bInterval 3
+Flysky
+Flysky Noble NB4
+A78519D90FCA
+Parsed intf->bInterfaceNumber: 0x00 
+Detected HID intf->bInterfaceClass: 0x03 
+         > Detected EP num: 1/2, len: 66, address: 0x81, mps: 64, dir: IN, attr: TYPE_INTR, ep_in->addr: 0x81
+         > Detected EP num: 2/2, len: 66, address: 0x01, mps: 64, dir: OUT, attr: TYPE_INTR, ep_out->addr: 0x01
+Claimed HID intf->bInterfaceNumber: 0x00 
+
+Parsed intf->bInterfaceNumber: 0x01 
+Detected HID intf->bInterfaceClass: 0x03 
+         > Detected EP num: 1/1, len: 66, address: 0x82, mps: 64, dir: IN, attr: TYPE_INTR, ep_in->addr: 0x82
+Claimed HID intf->bInterfaceNumber: 0x01 
+
+81 06 00 22 00 00 F8 03 
+transfer->data_buffer_size: 1024
+transfer->num_bytes: 1024
+usb_host_transfer_submit_control - completed 
+
+status 0, actual number of bytes transferred 33
+81 06 00 22 00 00 F8 03 
+
+>>> Goto https://eleccelerator.com/usbdescreqparser/ 
+>>> Copy & paste below HEX and parser as... USB HID Report Descriptor
+
+06 00 FF 09 01 A1 01 15 81 25 7F 75 08 96 18 01 09 01 81 02 09 01 91 02 C0 
+
+HID Report Descriptor
+> size: 25 bytes
+> Parsed Usage Page: Vendor Defined
+
+
+
+>>> Goto https://eleccelerator.com/usbdescreqparser/ 
+>>> Copy & paste below HEX and parser as... USB HID Report Descriptor
+
+05 01 09 05 A1 01 A1 00 05 09 19 01 29 18 15 00 25 01 95 18 75 01 81 02 05 01 09 30 09 31 09 32 09 33 09 34 09 35 09 36 09 36 16 00 00 26 FF 07 75 10 95 08 81 02 C0 C0 
+
+HID Report Descriptor
+> size: 56 bytes
+> Parsed Usage Page: HID Gamepad
