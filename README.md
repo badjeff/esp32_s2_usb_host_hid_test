@@ -8,7 +8,7 @@ An experimental project to test USB-OTG Host stack on Espressif ESP32 S2/S3 modu
 - Get HID Report Descriptor, print it to serial. No parser implemented, need some manual post-processing
 - Repeatly, request report packet from EP-IN, print (some of) report packet bytes in binary format to monitoring port
 
-Note: HID Report Descriptor is not parsed due to a simple calibration is need and will do the job in application.
+Note: HID Report Descriptor is not parsed due to calibration is needed and will do the job in real life application.
 
 ## License
 MIT
